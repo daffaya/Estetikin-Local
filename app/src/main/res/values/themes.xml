@@ -1,0 +1,56 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.Estetikin" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/dark_gray</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Default Font Family -->
+        <item name="android:textViewStyle">@style/OpenSansStyle</item>
+        <!-- Background Color -->
+        <item name="backgroundColor">@color/white_mode</item>
+        <item name="itemArticleColor">@color/purple</item>
+        <item name="colorTextDark">@color/dark_green</item>
+    </style>
+
+    <style name="OpenSansStyle">
+        <item name="android:fontFamily">@font/opensans_regular</item>
+    </style>
+
+    <style name="Bottom_Sheet_Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <style name="Text">
+        <item name="android:textColor">@color/dark_green</item>
+    </style>
+
+    <style name="Text.Title">
+        <item name="fontFamily">@font/opensans_bold</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="bottom_nav_overlay">
+        <!-- selected item -->
+        <item name="colorPrimary">@color/white</item>
+        <!-- other -->
+        <item name="colorOnSurface">@color/white</item>
+    </style>
+
+    <style name="Theme.Estetikin.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Estetikin.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Estetikin.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

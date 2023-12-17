@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/spacing_24"
+    android:layout_marginBottom="@dimen/spacing_24"
+    app:cardBackgroundColor="?attr/backgroundColor"
+    app:cardCornerRadius="@dimen/spacing_8">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_72">
+
+        <ImageView
+            android:id="@+id/iv_icon_item_module"
+            android:layout_width="@dimen/spacing_48"
+            android:layout_height="@dimen/spacing_48"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginVertical="@dimen/spacing_12"
+            android:layout_marginStart="@dimen/spacing_12"
+            android:src="@drawable/ic_module_dasar"
+            android:contentDescription="@string/icon_item_module" />
+
+        <TextView
+            android:id="@+id/tv_item_module_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_icon_item_module"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/spacing_20"
+            android:layout_marginEnd="@dimen/spacing_24"
+            android:fontFamily="@font/opensans_bold"
+            android:textSize="@dimen/text_size_12"
+            android:text="@string/belajar_dasar_setting_kamera" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

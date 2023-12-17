@@ -1,0 +1,183 @@
+<resources>
+    <string name="app_name" translatable="false">Estetikin</string>
+    <string name="logo_estetikin" translatable="false">Logo Estetikin</string>
+
+    <!-- Sign Up -->
+    <string name="signup">Sign Up</string>
+    <string name="signup_title">Let\'s create an account</string>
+    <string name="signup_message">Let\'s create an account for you ✨</string>
+    <string name="or_signup_with">Or Signup With</string>
+    <string name="signup_with_google">Signup with Google</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login">Login</string>
+    <string name="google_logo">Google Logo</string>
+
+
+    <string name="back_button">Back Button</string>
+
+    <!-- Login -->
+    <string name="login_title">Hello, let\'s sign in</string>
+    <string name="login_message">We help you improve your photography skills!</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="new_to_estetikin">New to Estetikin?</string>
+    <string name="et_email_error_message">Email address is not valid</string>
+    <string name="et_password_error_message">Passwords must be at least 8 characters</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="or_login_with">Or Login With</string>
+    <string name="login_with_google">Login with Google</string>
+    <string name="fullname">Full Name</string>
+
+
+    <string name="scroll_view" translatable="false">This is Scroll View</string>
+    <string name="confirm_password" translatable="false">Confirm Password</string>
+    <string name="home" translatable="false">Home</string>
+    <string name="placeHolder" translatable="false">Place Holder</string>
+
+    <!-- OnBoarding -->
+    <string name="next_title">Next</string>
+    <string name="skip_title">Skip</string>
+    <string name="get_started_title">Get Started</string>
+    <string name="title_onboarding_1">Enhance Your \n Photography Skills</string>
+    <string name="title_onboarding_2">Capture The Moments \n and Tell the Stories</string>
+    <string name="description_onboarding_1">Uncover the techniques used \n by professional photographers.</string>
+    <string name="description_onboarding_2">Transform ordinary scenes \n into extraordinary masterpieces.</string>
+    <string name="illustration_login" translatable="false">Login Illustration</string>
+    <string name="splash_screen">Splash Screen</string>
+
+    <!-- Home Fragment -->
+    <string name="title_home">Home</string>
+    <string name="upload_instruction">Choose how you want to \n input your picture.</string>
+    <string name="from_gallery">From Gallery</string>
+    <string name="use_camera">Use Camera</string>
+
+    <!-- Album -->
+    <string name="title_album" translatable="false">Album</string>
+    <string name="title_album_detail" translatable="false">Album Detail</string>
+
+    <!-- Article -->
+    <string name="title_article">Article</string>
+    <string name="article_around_the_world">Article Around The World</string>
+
+    <!-- Article Item -->
+    <string name="articles_title">Article`s Title</string>
+    <string name="article_cover">Article Cover</string>
+    <string name="article_category">Article Category</string>
+    <string name="article_author">Author: </string>
+    <string name="article_for_you">Article For You</string>
+
+    <!-- Settings Fragment-->
+    <string name="title_setting">Settings</string>
+    <string name="language">Language</string>
+    <string name="language_selected">Language Selected</string>
+    <string name="language_icon">Language Icon</string>
+    <string name="arrow_icon">Arrow Icon</string>
+    <string name="ui_mode_icon">UI Mode Icon</string>
+    <string name="ui_mode">UI Mode</string>
+    <string name="ui_mode_selected">UI Mode Selected</string>
+    <string name="light_theme">Light</string>
+    <string name="dark_theme">Dark</string>
+    <string name="logout">Logout</string>
+
+    <!-- Item Language  -->
+    <string name="english">English</string>
+    <string name="bahasa_indonesia">Bahasa Indonesia</string>
+
+    <!-- Module Fragment -->
+    <string name="title_module">Module</string>
+    <string name="module_cover">Module Cover</string>
+    <string name="module_title_placeholder">Module Title Placeholder</string>
+    <string name="module_description_placeholder">Module Description Placeholder</string>
+    <string name="number_placeholder">1</string>
+    <string name="module_step_image">Module Step Image</string>
+    <string name="module_text_description_placeholder">Alternatively, buy your cameras individually. Once you know how many cameras you need, you\'ll need to think about what specific cameras you want. A home surveillance system can cost anywhere from a few hundred dollars to well over a thousand, so make sure you consider the type of cameras you need before buying — the features below should be clearly labeled on the box. While you can buy all of the parts separately, buying a full \"surveillance set\" is usually cheaper and easier to install. Wireless vs. Wired: Wireless cameras are easy to set-up without drilling or running cables through your house, but the quality can be sub-par the further they get away from the receiver. If you are covering a big area, go wired, but most houses find wireless an easier set-up process. Indoor or Outdoor: </string>
+
+    <!-- Camera -->
+    <string name="title_camera">Camera</string>
+    <string name="switch_camera">Switch Camera</string>
+    <string name="camera_background_icon">Camera Background Icon</string>
+    <string name="try_out_our_camera">Try Out Our Camera!</string>
+    <string name="title_gallery">Gallery</string>
+    <string name="step_title_placeholder">Step Title Placeholder</string>
+
+    <!-- Result -->
+    <string name="title_result">Result</string>
+    <string name="your_picture">Your Picture</string>
+    <string name="result_picture_placeholder">Result Picture Placeholder</string>
+    <string name="what_can_you_improve">What Can You Improve?</string>
+    <string name="improve_suggestion_placeholder">Improve Suggestion Placeholder</string>
+
+    <!-- Album Detail -->
+    <string name="album_photo">Album Photo</string>
+    <string name="date_time">Date Time</string>
+    <string name="album_recomendation">Album Recomendation</string>
+
+    <!-- Module Fragment <-->
+    <string name="unlock_your_photographic_potential">Unlock Your Photographic Potential</string>
+    <string name="master_the_art_of_photography_and_capture_breathtaking_moments">Master the art of photography and capture breathtaking moments.</string>
+    <string name="icon_item_module">Icon Item Module</string>
+    <string name="belajar_dasar_setting_kamera">Belajar Dasar Setting Kamera</string>
+    <string name="title_module_detail">Module Detail</string>
+    <string name="send_button">Send Button</string>
+
+    <!-- Sentiment Analysis -->
+    <string name="sentiment_analysis_background">Sentiment Analysis Background</string>
+    <string name="sentiment_analysis_illustration">Sentiment Analysis Illustration</string>
+    <string name="hi_folks">Hi Folks</string>
+    <string name="personalize_your_preferences_n_and_elevate_our_services_to_new_heights">Personalize your preferences \nand elevate our services to new heights.</string>
+    <string name="what_do_you_use_to_take_a_picture">What do you use to take a picture?</string>
+    <string name="ios">IOS</string>
+    <string name="android">Android</string>
+    <string name="dslr">DSLR</string>
+    <string name="mirrorless">Mirrorless</string>
+    <string name="sentiment_lines">Sentiment Lines</string>
+    <string name="sentiment_slogan">Make your life more aesthetic</string>
+    <string name="halo">Halo</string>
+    <string name="kumaa">Kumaa</string>
+    <string name="greeting_message">Let\'s start taking picture</string>
+    <string name="title_preferences">Preferences</string>
+    <string name="preferences_selected">Preferences Selected</string>
+    <string name="your_preferences">Your Preferences: </string>
+    <string name="prefereneces_icon">Preferences Icon</string>
+    <string name="video">Video</string>
+    <string name="forgot_password_description">Don’t worry. Things happen in life. Please enter the address associated with your account.</string>
+    <string name="enter_email">Enter your email here: </string>
+    <string name="reset_password">Reset Password</string>
+    <string name="title_back">Back</string>
+    <string name="create_password">Create New Password</string>
+    <string name="create_password_description">Your new password must be different from the previous one.</string>
+    <string name="save">Save</string>
+    <string name="illustration_check_email">Check Email Illustration</string>
+    <string name="check_email">Stay Connected! Check Your Email.</string>
+    <string name="check_email_description">Almost there! We\'ve sent you an email with instructions on how to reset your password. Please check your inbox and follow the provided link to proceed.</string>
+    <string name="ok">OK</string>
+    <string name="back_to_login">Back to Login</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="change_picture">Change Profile Picture Button</string>
+    <string name="sign_out">Sign out</string>
+    <string name="dynamic_background">Dynamic Background Color</string>
+    <string name="password_icon">Icon Password</string>
+    <string name="change_password">Change Password</string>
+    <string name="nickname">Nickname</string>
+    <string name="confirm_picture_placeholder">Confirm Picture Placeholder</string>
+    <string name="title_profile">Profile</string>
+    <string name="confirm_email">Confirm Email</string>
+
+    <!-- ML Recomendation -->
+    <!-- Model 1 -->
+    <string name="food_beverage" >You are doing Food/Beverages Photography</string>
+    <string name="model" >There is a model inside your picture</string>
+    <string name="indoor" >You are doing an indoor photography </string>
+    <string name="outdoor">You are doing an outdoor photography</string>
+    <!-- Model 2-->
+    <string name="blurry" >Your picture is blurry</string>
+    <string name="wellFocused" >Your camera lens is clear and well-focused!</string>
+    <!-- Model 3-->
+    <string name="dark"> Your picture is too dark</string>
+    <string name="bright">Your picture is too bright</string>
+    <string name="normal" >Your picture brightness comes out great!</string>
+    <!-- Model 4-->
+    <string name="centered" >Your object in this picture is in a good position!</string>
+    <string name="nonCentered" >Your object in this picture is not in a good position</string>
+    <string name="see_our_example" >See Our Example</string>
+</resources>
