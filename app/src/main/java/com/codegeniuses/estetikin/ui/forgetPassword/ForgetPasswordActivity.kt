@@ -24,7 +24,7 @@ class ForgetPasswordActivity : AppCompatActivity(), LoadingHandler {
         supportActionBar?.hide()
 
         setupViewModel()
-        setupAction()
+        setupAction1()
         navigateToLogin()
     }
 
@@ -51,6 +51,12 @@ class ForgetPasswordActivity : AppCompatActivity(), LoadingHandler {
                 }
 
             }
+        }
+    }
+
+    private fun setupAction1() {
+        binding.btnResetPassword.setOnClickListener {
+            navigateToCheckEmail()
         }
     }
 

@@ -217,7 +217,6 @@ class ArticleFragment : Fragment(), LoadingHandler {
 
     private fun showRecyclerList(){
         rvArticle.layoutManager = LinearLayoutManager(requireContext())
-        val listArticleAdapter = ArticleLocalAdapter(articleList)
         rvArticle.adapter = localAdapter
     }
 
