@@ -206,4 +206,48 @@
         <item>@drawable/ic_module_malam</item>
         <item>@drawable/ic_module_centered</item>
     </integer-array>
+
+
+    <!-- Article -->
+    <!-- Article Title -->
+    <string-array name="article_title">
+        <item>Pengertian Fotografi dan Materi Dasar Seputar Fotografi</item>
+        <item>Apa itu fotografi?</item>
+        <item>14 Teknik Dasar Fotografi yang Wajib Dikuasai Calon Fotografer Andal</item>
+        <item>10 Istilah Dasar Fotografi</item>
+        <item>Pengertian Fotografi dan Jenis-jenisnya</item>
+        <item>Jenis-Jenis Fotografi Paling Populer yang Wajib Diketahui Pemula</item>
+        <item>Fotografi Bukan Sekedar Cekrek!</item>
+        <item>Pengertian Fotografer dan Fotografi</item>
+        <item>Jenis-Jenis Fotografi dan Penjelasannya yang Perlu Diketahui</item>
+        <item>Teknik Dasar Fotografi by Tempo</item>
+    </string-array>
+
+    <!-- Article Author  -->
+    <string-array name="article_author">
+        <item>pixel web</item>
+        <item>selamatpagi.id</item>
+        <item>glints.com</item>
+        <item>glints.com</item>
+        <item>superprof.co.id</item>
+        <item>liputan6</item>
+        <item>Kemenkeu</item>
+        <item>DIY Kamera</item>
+        <item>bola.com</item>
+        <item>tempo</item>
+    </string-array>
+
+    <!-- Article Link -->
+    <string-array name="article_link">
+        <item>https://www.pixel.web.id/pengertian-fotografi/</item>
+        <item>https://www.selamatpagi.id/pengertian-fotografi/#!</item>
+        <item>https://glints.com/id/lowongan/teknik-dasar-fotografi/</item>
+        <item>https://glints.com/id/lowongan/istilah-dasar-fotografi/</item>
+        <item>https://www.superprof.co.id/blog/fakta-tentang-fotografi/</item>
+        <item>https://www.liputan6.com/tekno/read/3917679/jenis-jenis-fotografi-paling-populer-yang-wajib-diketahui-pemula</item>
+        <item>https://www.djkn.kemenkeu.go.id/artikel/baca/13875/Fotografi-Bukan-Sekedar-Cekrek.html</item>
+        <item>https://www.diykamera.com/pengertian-fotografer-dan-fotografi/</item>
+        <item>https://www.bola.com/ragam/read/4884062/jenis-jenis-fotografi-dan-penjelasannya-yang-perlu-diketahui</item>
+        <item>https://tempoinstitute.com/course/detail/fotografi-dasar</item>
+    </string-array>
 </resources>

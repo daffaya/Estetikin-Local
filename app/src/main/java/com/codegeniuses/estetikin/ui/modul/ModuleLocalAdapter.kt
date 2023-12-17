@@ -12,13 +12,6 @@ import com.codegeniuses.estetikin.data.local.Module
 import com.codegeniuses.estetikin.model.response.module.DataItem
 
 class ModuleLocalAdapter(private val listModule: ArrayList<Module>): RecyclerView.Adapter<ModuleLocalAdapter.ListViewHolder>() {
-    private var listModules: List<Module> = emptyList()
-
-    private lateinit var onItemClickCallback: ModuleLocalAdapter.OnItemClickCallBack
-
-    interface OnItemClickCallBack {
-        fun onItemClicked(data: Module)
-    }
 
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val iconModule: ImageView = itemView.findViewById(R.id.iv_icon_item_module)
@@ -38,8 +31,5 @@ class ModuleLocalAdapter(private val listModule: ArrayList<Module>): RecyclerVie
 
         holder.iconModule.setImageResource(icon)
         holder.titleModule.text = title
-//        holder.itemView.setOnClickListener {
-//            onItemClickCallback.onItemClicked(listModules[holder.adapterPosition])
-//        }
     }
 }

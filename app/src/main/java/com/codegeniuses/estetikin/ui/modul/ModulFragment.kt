@@ -132,7 +132,7 @@ class ModulFragment : Fragment(), LoadingHandler {
     }
     private fun swipeRefresh() {
         binding.swipeRefresh.setOnRefreshListener {
-            setupModule()
+            setupModule1()
         }
     }
 

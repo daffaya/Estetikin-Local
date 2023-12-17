@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -16,6 +17,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.codegeniuses.estetikin.R
 import com.codegeniuses.estetikin.data.local.UserPreference
 import com.codegeniuses.estetikin.databinding.FragmentArticleBinding
@@ -25,6 +27,7 @@ import com.codegeniuses.estetikin.model.response.article.ArticleItem
 import com.codegeniuses.estetikin.model.result.Result
 import com.codegeniuses.estetikin.ui.MainActivity
 import com.codegeniuses.estetikin.ui.camera.CameraActivity
+import com.codegeniuses.estetikin.ui.modul.ModuleLocalAdapter
 
 class ArticleFragment : Fragment(), LoadingHandler {
 
@@ -35,6 +38,9 @@ class ArticleFragment : Fragment(), LoadingHandler {
     private val adapter = ArticleAdapter()
     private val adapterPreference = ArticlePreferenceAdapter()
     private var isRefreshing = false
+    private lateinit var rvArticle: RecyclerView
+    private val articleList = ArrayList<ArticleItem>()
+    private val localAdapter = ArticleLocalAdapter(articleList)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,7 +56,6 @@ class ArticleFragment : Fragment(), LoadingHandler {
 
         val layoutManager = LinearLayoutManager(requireContext())
         binding.rvArticle.layoutManager = layoutManager
-        binding.rvArticle.adapter = adapter
 
         val layoutManagerPreference = LinearLayoutManager(requireContext())
         binding.rvArticleCategory.layoutManager = layoutManagerPreference
@@ -59,7 +64,7 @@ class ArticleFragment : Fragment(), LoadingHandler {
         swipeRefresh()
         setupViewModel()
         setupAction()
-        setupArticle()
+        setupArticle1()
 
     }
 
@@ -88,7 +93,7 @@ class ArticleFragment : Fragment(), LoadingHandler {
             }
 
         }
-        adapter.setOnItemClickCallback(object : ArticleAdapter.OnItemClickCallBack {
+        localAdapter.setOnItemClickCallback(object : ArticleLocalAdapter.OnItemClickCallBack {
             override fun onItemClicked(data: ArticleItem) {
                 showSelectedArticle(data)
             }
@@ -160,6 +165,62 @@ class ArticleFragment : Fragment(), LoadingHandler {
 
     }
 
+    private fun setupArticle1() {
+        isRefreshing = true
+
+        rvArticle = binding.rvArticle
+        rvArticle.setHasFixedSize(true)
+
+        articleList.addAll(getArticleList())
+        showRecyclerList()
+
+        val userPref = getUserPreference()
+
+        articleViewModel.getArticles(userPref).observe(requireActivity()) {
+            it?.let { result ->
+                when (result) {
+                    is Result.Loading -> {
+                        loadingHandler(true)
+                    }
+                    is Result.Error -> {
+                        loadingHandler(false)
+                        Toast.makeText(
+                            requireContext(),
+                            "Failed to fetch article",
+                            Toast.LENGTH_SHORT
+                        )
+                            .show()
+                    }
+                    is Result.Success -> {
+                        loadingHandler(false)
+                        adapterPreference.setArticlePreferenceData(result.data.data)
+                    }
+                }
+            }
+        }
+
+    }
+
+    private fun getArticleList(): ArrayList<ArticleItem>{
+        val tvArticleTitle = resources.getStringArray(R.array.article_title)
+        val tvAuthor = resources.getStringArray(R.array.article_author)
+        val tvArticleLink = resources.getStringArray(R.array.article_link)
+        val articleList = ArrayList<ArticleItem>()
+
+        for (i in tvArticleTitle.indices){
+            val articles = ArticleItem(tvAuthor[i], tvArticleTitle[i], tvArticleLink[i])
+            articleList.add(articles)
+        }
+
+        return articleList
+    }
+
+    private fun showRecyclerList(){
+        rvArticle.layoutManager = LinearLayoutManager(requireContext())
+        val listArticleAdapter = ArticleLocalAdapter(articleList)
+        rvArticle.adapter = localAdapter
+    }
+
     private fun getUserPreference(): String {
         val pref = UserPreference(requireContext())
         return pref.getUserPreference() ?: "all"
@@ -180,10 +241,10 @@ class ArticleFragment : Fragment(), LoadingHandler {
 
     private fun swipeRefresh() {
         binding.swipeRefresh.setOnRefreshListener {
-            setupArticle()
+            setupArticle1()
         }
         binding.swipeRefreshPreference.setOnRefreshListener {
-            setupArticle()
+            setupArticle1()
         }
     }
 
