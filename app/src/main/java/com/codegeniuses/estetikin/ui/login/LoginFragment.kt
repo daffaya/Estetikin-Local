@@ -41,7 +41,7 @@ class LoginFragment : Fragment(), LoadingHandler {
         navigateToForgotPassword()
         setupViewModel()
         playAnimation()
-        setupAction()
+        setupAction1()
     }
 
     override fun onDestroyView() {
@@ -120,6 +120,14 @@ class LoginFragment : Fragment(), LoadingHandler {
         }
     }
 
+    private fun setupAction1() {
+        binding.btnLogin.setOnClickListener {
+            val intent = Intent(requireContext(), SentimentActivity::class.java)
+            intent.flags =
+                Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+        }
+    }
 
     private fun navigateToSentimentActivity() {
         val intent = Intent(requireContext(), SentimentActivity::class.java)

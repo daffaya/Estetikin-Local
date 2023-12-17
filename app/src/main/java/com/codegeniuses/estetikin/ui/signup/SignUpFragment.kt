@@ -38,7 +38,7 @@ class SignUpFragment : Fragment(), LoadingHandler {
         super.onViewCreated(view, savedInstanceState)
         setupViewModel()
         playAnimation()
-        setupAction()
+        setupAction1()
     }
 
     override fun onDestroyView() {
@@ -119,6 +119,15 @@ class SignUpFragment : Fragment(), LoadingHandler {
                         }
                     }
                 }
+        }
+        binding.btnLogin.setOnClickListener {
+            findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
+        }
+    }
+
+    private fun setupAction1() {
+        binding.btnSignUp.setOnClickListener {
+            findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
         }
         binding.btnLogin.setOnClickListener {
             findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
