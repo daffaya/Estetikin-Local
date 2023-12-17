@@ -127,6 +127,9 @@ class LoginFragment : Fragment(), LoadingHandler {
                 Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
         }
+        binding.btnSignUp.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_signUpFragment)
+        }
     }
 
     private fun navigateToSentimentActivity() {

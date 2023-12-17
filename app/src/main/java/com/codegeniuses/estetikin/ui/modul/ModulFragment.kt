@@ -10,7 +10,9 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.codegeniuses.estetikin.R
+import com.codegeniuses.estetikin.data.local.Module
 import com.codegeniuses.estetikin.databinding.FragmentModulBinding
 import com.codegeniuses.estetikin.factory.ViewModelFactory
 import com.codegeniuses.estetikin.helper.LoadingHandler
@@ -26,6 +28,8 @@ class ModulFragment : Fragment(), LoadingHandler {
     private val moduleViewModel: ModuleViewModel by viewModels { factory }
     private val adapter = ModuleAdapter()
     private var isRefreshing = false
+    private lateinit var rvModule: RecyclerView
+    private val moduleList = ArrayList<Module>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,7 +49,6 @@ class ModulFragment : Fragment(), LoadingHandler {
 
         val layoutManager = LinearLayoutManager(requireContext())
         binding.rvItemModule.layoutManager = layoutManager
-        binding.rvItemModule.adapter = adapter
 
         swipeRefresh()
     }
@@ -58,7 +61,7 @@ class ModulFragment : Fragment(), LoadingHandler {
 
         swipeRefresh()
         setupViewModel()
-        setupModule()
+        setupModule1()
         setupAction()
     }
 
@@ -103,6 +106,30 @@ class ModulFragment : Fragment(), LoadingHandler {
         factory = ViewModelFactory.getInstance(requireContext())
     }
 
+    private fun setupModule1(){
+        rvModule = binding.rvItemModule
+        rvModule.setHasFixedSize(true)
+
+        moduleList.addAll(getModuleList())
+        showRecycleList()
+    }
+
+    private fun getModuleList(): ArrayList<Module> {
+        val moduleTitle = resources.getStringArray(R.array.module_title)
+        val moduleIcon = resources.obtainTypedArray(R.array.module_icon)
+        val moduleList = ArrayList<Module>()
+        for (i in moduleTitle.indices){
+            val modules = Module(moduleIcon.getResourceId(i, -1), moduleTitle[i])
+            moduleList.add(modules)
+        }
+        return moduleList
+    }
+
+    private fun showRecycleList(){
+        rvModule.layoutManager = LinearLayoutManager(requireContext())
+        val listModuleAdapter = ModuleLocalAdapter(moduleList)
+        rvModule.adapter = listModuleAdapter
+    }
     private fun swipeRefresh() {
         binding.swipeRefresh.setOnRefreshListener {
             setupModule()

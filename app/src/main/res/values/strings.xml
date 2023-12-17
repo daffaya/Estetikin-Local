@@ -180,4 +180,30 @@
     <string name="centered" >Your object in this picture is in a good position!</string>
     <string name="nonCentered" >Your object in this picture is not in a good position</string>
     <string name="see_our_example" >See Our Example</string>
+
+
+    <!--Modul-->
+    <!-- Modul Title -->
+    <string-array name="module_title">
+        <item>Belajar Memfokuskan Lensa Kamera</item>
+        <item>Belajar Mengatur Tingkat Keterangan/Cahaya Gambar pada Kamera</item>
+        <item>Tips dan Teknik Fotografi Dasar</item>
+        <item>Belajar Pose untuk membuat fotografi Model menjadi lebih menarik</item>
+        <item>Pengaturan Dasar Kamera pada Smartphone</item>
+        <item>Belajar Foto dengan Objek Berada di Tengah Frame</item>
+        <item>Tips Memotret di Malam Hari dengan Kamera Smartphone</item>
+        <item>Belajar Fotografi level Menengah untuk menghasilkan kualitas gambar yang lebih baik</item>
+    </string-array>
+
+    <!-- Module Icon  -->
+    <integer-array name="module_icon">
+        <item>@drawable/ic_module_focuse</item>
+        <item>@drawable/ic_module_lighting</item>
+        <item>@drawable/ic_module_dasar</item>
+        <item>@drawable/ic_module_camera</item>
+        <item>@drawable/ic_module_dasar</item>
+        <item>@drawable/ic_module_centered</item>
+        <item>@drawable/ic_module_malam</item>
+        <item>@drawable/ic_module_centered</item>
+    </integer-array>
 </resources>
